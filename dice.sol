@@ -47,8 +47,6 @@ contract Dice is VRFConsumerBaseV2 {
         } else {
             IdToBetInfo[requestId].result = Choice.BIG;
         }
-
-        
     }
 
     modifier onlyOwner {
@@ -86,5 +84,4 @@ contract Dice is VRFConsumerBaseV2 {
             _address.transfer(IdToBetInfo[_requestId].size * 2);
         }
     }
-
 }
